@@ -1,0 +1,68 @@
+<?php
+    
+
+    $material1 = array ("Nome" => "Caneta", "Quantidade" => 10, "Preço" => 2.50);
+    $material2 = array ("Nome" => "Apontador", "Quantidade" => 5, "Preço" => 1.50);
+    $material3 = array ("Nome" => "Lápis", "Quantidade" => 15, "Preço" => 1.00);
+    $material4 = array ("Nome" => "Borracha", "Quantidade" => 20, "Preço" => 0.50);
+    $material5 = array ("Nome" => "Caderno", "Quantidade" => 5, "Preço" => 10.00);
+   
+    /*echo $material[1] . "<br><br>";
+
+    echo "FOREACH<br>";
+        foreach ($material as $mat)
+            echo $mat. "<br>";    
+
+    */
+
+    echo "<table border=2>";
+    foreach ($material1 as $mat) {
+        echo "<tr>";
+        echo "<td>" . $mat . "</td>";
+    
+        
+    
+        //foreach ($mat as $tipomaterial)
+        //    echo "<td>$tipomaterial</td>";
+        echo "</tr>";
+    }
+    foreach ($material2 as $mat) {
+        echo "<tr>";
+        echo "<td>" . $mat . "</td>";
+
+        echo "</tr>";
+    }
+
+    foreach ($material3 as $mat) {
+        echo "<tr>";
+        echo "<td>" . $mat . "</td>";
+
+        echo "</tr>";
+    }
+          
+    foreach ($material4 as $mat) {
+        echo "<tr>";
+        echo "<td>" . $mat . "</td>";
+
+        echo "</tr>";
+    }
+          
+    foreach ($material5 as $mat) {
+        echo "<tr>";
+        echo "<td>" . $mat . "</td>";
+
+        echo "</tr>";
+    }
+          
+            
+
+
+    echo "</table>";
+
+
+
+
+ 
+   
+
+?>
