@@ -1,3 +1,70 @@
+FUNÇÃO
+<?php
+    function fatorial($num){
+        //calculo para fatorial de $num
+        $fatorial = 1;
+        for($i=$num;  $i>=1; $i--){
+            $fatorial = $fatorial *$i;
+        }
+
+        return $fatorial;
+       
+
+        //fazer laço de $num ate 1, acumulando os resultados mutiplicados
+
+        //retornar o valor acumulado da mutiplicação
+    }
+for($i=5; $i<=12; $i++)
+    echo "Fatorial de 5: " . $i . fatorial($i) . "<br>";
+ //fazer a chamada de fatorial para os numeros de 5 a 10
+
+
+
+ echo "<br><br>";
+ echo "Exercício 2: Circulo";
+ echo "<br><br>";
+
+ define("PI", 3.14);
+ 
+ function area($raio){
+    $area = 3.14 * $raio * $raio;
+    return $area;
+
+}
+ 
+
+
+
+ function circ($raio){
+
+    return 3.14 * $raio * 2;
+}
+
+$raio1=10;
+$raio2=15;
+$raio3=20;
+
+$raios = array($raio1, $raio2, $raio3);
+foreach ($raios as $raio){
+    echo "Círculo de raio" . $raio . "cm";
+    echo "Area: " . $area($raio) . "cm2 Circuferencia: " . 
+    circ($raio) . "cm";
+    echo "<br><br>";
+}
+
+
+
+?>
+
+public function__construct($cor, $numero){
+            $this->cor = $cor;
+            $this->numero = $numero;
+            
+            
+        }
+
+
+CLASSE
 <?php
     echo "<h2> Exercício 1 </h2>";
 
