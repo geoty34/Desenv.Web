@@ -1,0 +1,131 @@
+<?php
+    echo "<h2> Exercício 1 </h2>";
+
+    class Pessoa{
+        private $nome;
+        private $sobrenome;
+        
+
+       
+
+        public function getNomecompleto(){
+            return $this->nome . "   " . $this->sobrenome;
+        }
+
+        public function getNome()
+        {
+                return $this->nome;
+        }
+
+        
+        public function setNome($nome)
+        {
+                $this->nome = $nome;
+
+                return $this;
+        }
+ 
+        public function getSobrenome()
+        {
+                return $this->sobrenome;
+        }
+
+        
+        public function setSobrenome($sobrenome)
+        {
+                $this->sobrenome = $sobrenome;
+
+                return $this;
+        }
+    }
+
+    $pessoa = new Pessoa();
+    $pessoa->setNome("Nome: Geovana");
+    
+    $pessoa->setSobrenome("Santos de Souza");
+
+    echo $pessoa->getNomecompleto();
+
+    echo "<br><br>";
+    echo "<h2> Exercício 2 </h2>";
+
+    class Livro{
+        private $titulo;
+        private $autor;
+        private $genero;
+        private $qtpag;
+
+
+        
+        public function getDadoslivro(){
+            return $this->titulo . ;
+        }
+
+        public function getTitulo()
+        {
+                return $this->titulo;
+        }
+
+        
+        public function setTitulo($titulo)
+        {
+                $this->titulo = $titulo;
+
+                return $this;
+        }
+
+        
+        public function getAutor()
+        {
+                return $this->autor;
+        }
+
+       
+        public function setAutor($autor)
+        {
+                $this->autor = $autor;
+
+                return $this;
+        }
+
+       
+        public function getGenero()
+        {
+                return $this->genero;
+        }
+
+      
+        public function setGenero($genero)
+        {
+                $this->genero = $genero;
+
+                return $this;
+        }
+
+        
+        public function getQtpag()
+        {
+                return $this->qtpag;
+        }
+
+
+        public function setQtpag($qtpag)
+        {
+                $this->qtpag = $qtpag;
+
+                return $this;
+        }
+    }
+
+
+    $livro = new Livro();
+    $livro->setTitulo("Nome: Geovana");
+    $livro->setAutor("");
+    $livro->setGenero("");
+
+    echo $livro->getDadoslivro();
+
+
+    
+
+?>
