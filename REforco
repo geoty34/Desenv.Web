@@ -1,0 +1,59 @@
+<?php
+  $fruta = array("banana", "maçã", "melão", "morango", "pitaia", "abacate");
+  echo $fruta[3];
+
+  //Imprimir todos os elementos do array $fruta
+  echo("<br>");
+  echo count($fruta);
+
+  echo("<br>");
+
+  for($i=0; $i<count($fruta); $i++){
+    echo $fruta[$i] . " - ";
+  }
+
+   echo("<br>");
+
+   foreach($fruta as $i){
+    echo $i . " - ";
+   }
+
+    echo("<br>");
+
+    //Array associativo
+
+    $pessoa = array( "nome" => "geovana",
+                     "idade" => "17",
+                     "corfavorita" => "Preto"
+
+
+    );
+
+    echo $pessoa ["idade"];
+    echo $pessoa ["corfavorita"];
+
+     echo("<br>");
+     foreach ($pessoa as $c => $var){
+        echo $c . " : ". $var . "<br>";
+     }
+
+     $pessoa2 = array( "nome" => "Daniel",
+                      "idade" => "18",
+                      "corfavorita" => "Azul"
+    );
+
+    $total = array ($pessoa, $pessoa2);
+    echo $total[0] ["nome"];
+    echo $total[1] ["corfavorita"];
+    echo("<br>");
+
+    foreach ($total as $b){
+      echo $b ["nome"] . "<br>";
+    }
+
+    echo("<br>");
+    foreach ($total as $b){
+      foreach ($b as $c => $var){
+        echo $c . " : ". $var . "<br>";
+     }
+    }
