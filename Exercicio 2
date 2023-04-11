@@ -1,0 +1,98 @@
+<?php
+
+class Retangulo{
+    private $base;
+    private $altura;
+    private $cor;
+
+    public function getAreaRetangulo(){
+        return $this->base * $this->altura;
+    }
+
+    public function getPerimetroRetangulo(){
+        return $this->base + $this->altura + $this->base + $this->altura;
+    }
+
+    public function getBase()
+    {
+            return $this->base;
+    }
+
+    
+    public function setBase($base)
+    {
+            $this->base = $base;
+
+            return $this;
+    }
+
+
+    public function getAltura()
+    {
+            return $this->altura;
+    }
+
+    
+    public function setAltura($altura)
+    {
+            $this->altura = $altura;
+
+            return $this;
+    }
+
+    public function setCor($cor)
+    {
+            $this->cor = $cor;
+
+            return $this;
+    }
+
+    public function getCor()
+    {
+            return $this->cor;
+    }
+
+}
+
+
+$retangulo = new Retangulo();
+$retangulo->setBase(18);
+$retangulo->setAltura(6);
+$retangulo->setCor("Azul");
+
+
+/*
+echo $retangulo->getAreaRetangulo();
+echo "<br>";
+echo $retangulo->getPerimetroRetangulo();
+echo "<br>";
+echo $retangulo->getCor();
+*/
+
+$retangulo2 = new Retangulo();
+$retangulo2->setAltura(10);
+$retangulo2->setBase(20);
+$retangulo2->setCor("Preto");
+/*
+echo "<br>";
+echo $retangulo2->getAreaRetangulo();
+echo "<br>";
+echo $retangulo2->getPerimetroRetangulo();
+echo "<br>";
+echo $retangulo2->getCor();
+
+echo "<br>";
+*/
+
+echo "<br>";
+$retangulos = array($retangulo, $retangulo2);
+//echo $retangulos[1]->getAreaRetangulo();
+foreach ($retangulos as $val){
+    echo $val->getCor();
+    echo "<br>";
+    echo $val->getAreaRetangulo();
+    echo "<br>";
+    echo $val->getPerimetroRetangulo();
+    echo "<br><br>";
+
+}
