@@ -1,0 +1,80 @@
+<?php
+echo "<h3>Exercício 4: </h3><br>";
+
+class Carro{
+    private $modelo;
+    private $marca;
+    private $link;
+
+    public function __construct($modelo, $marca, $link) {
+        $this->modelo = $modelo;
+        $this->marca = $marca;
+        $this->link = $link;
+    }  
+
+    public function getModelo()
+    {
+        return $this->modelo;
+    }
+
+    public function setModelo($modelo)
+    {
+        $this->modelo = $modelo;
+
+        return $this;
+    }
+
+    public function getMarca()
+    {
+        return $this->marca;
+    }
+
+   
+    public function setMarca($marca)
+    {
+        $this->marca = $marca;
+
+        return $this;
+    }
+
+  
+    public function getLink()
+    {
+        return $this->link;
+    }
+
+   
+    public function setLink($link)
+    {
+        $this->link = $link;
+
+        return $this;
+    }
+
+}
+
+//Exercução
+
+$ca1 = new Carro("Polo", "Volkswagem", 
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ773FjRJgfC58OplqcafaXI7cJWoLZpAtRsWPZK1tRxQ&s");
+$ca2 = new Carro("Tempra", "Fiat", 
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Fiat_Tempra_berlina.jpg/250px-Fiat_Tempra_berlina.jpg");
+$ca3 = new Carro("Marea", "Fiat", 
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Fiat_Marea_Sedan_%2844213257002%29.jpg/300px-Fiat_Marea_Sedan_%2844213257002%29.jpg");
+$ca4 = new Carro("Renegade", "Jeep", 
+    "https://revistacarro.com.br/wp-content/uploads/2022/02/Jeep-Renegade-2022-Longitude_12.jpg");
+$ca5 = new Carro("Onix", "Chevrolet", 
+    "https://image1.mobiauto.com.br/images/api/images/v1.0/12017711/transform/fl_progressive,f_webp,q_70");
+
+$carros = array($ca1, $ca2, $ca3, $ca4, $ca5);
+
+foreach($carros as $car) {
+    echo "<div style='border: solid 1px; width: 300px; margin-top: 20px;'>";
+    
+    echo $car->getModelo() . "<br>";
+    echo $car->getMarca() . "<br>";
+    echo "<img style='width: 100%; height: auto;' src='" . $car->getLink() .
+     "' </><br>";
+
+    echo "</div>";
+}
